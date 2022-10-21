@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import AwaitAxios from './AwaitAxios'
+import AwaitFetch from './AwaitFetch'
+import AxiosApi from './AxiosApi'
+import FetchApi from './FetchApi'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div className='main-container'>
+      <FetchApi />
     </div>
-  );
+    <br />
+    <br />
+    <div className='main-container'>
+      <AxiosApi />
+    </div>
+    <br />
+    <br />
+    <div className='main-container'>
+      <AwaitFetch />
+    </div>
+    <br />
+    <br />
+    <div className='main-container'>
+      <AwaitAxios />
+    </div>
+    </>
+  )
 }
 
-export default App;
+export default App
